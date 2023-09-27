@@ -1,7 +1,7 @@
 {
   "id" : "8ca677d0-15c3-498c-8666-67782b58d7cb",
   "realm" : "lumi",
-  "notBefore" : 0,
+  "notBefore" : 10,
   "defaultSignatureAlgorithm" : "RS256",
   "revokeRefreshToken" : false,
   "refreshTokenMaxReuse" : 0,
