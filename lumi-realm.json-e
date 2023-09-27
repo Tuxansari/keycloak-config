@@ -1,6 +1,6 @@
 {
   "id" : "8ca677d0-15c3-498c-8666-67782b58d7cb",
-  "kingdom" : "lumi",
+  "realm" : "lumi",
   "notBefore" : 0,
   "defaultSignatureAlgorithm" : "RS256",
   "revokeRefreshToken" : false,
@@ -44,13 +44,13 @@
   "maxDeltaTimeSeconds" : 43200,
   "failureFactor" : 30,
   "roles" : {
-    "kingdom" : [ {
+    "realm" : [ {
       "id" : "6d591d08-6f3c-44c8-8db5-ca04f54f0ea4",
       "name" : "default-roles-lumi",
       "description" : "${role_default-roles}",
       "composite" : true,
       "composites" : {
-        "kingdom" : [ "offline_access", "uma_authorization" ],
+        "realm" : [ "offline_access", "uma_authorization" ],
         "client" : {
           "account" : [ "manage-account", "view-profile" ]
         }
@@ -108,7 +108,7 @@
       "attributes" : { }
     } ],
     "client" : {
-      "kingdom-management" : [ {
+      "realm-management" : [ {
         "id" : "664f9fb8-b23a-4506-9468-ad4f7f75f2a2",
         "name" : "manage-clients",
         "description" : "${role_manage-clients}",
@@ -134,8 +134,8 @@
         "attributes" : { }
       }, {
         "id" : "9eafffa5-55af-4814-9c29-1f7fff030f00",
-        "name" : "manage-kingdom",
-        "description" : "${role_manage-kingdom}",
+        "name" : "manage-realm",
+        "description" : "${role_manage-realm}",
         "composite" : false,
         "clientRole" : true,
         "containerId" : "3eaecc99-83d4-4c7f-ab1b-1aeb82987bd3",
@@ -150,8 +150,8 @@
         "attributes" : { }
       }, {
         "id" : "43e3222d-d0d4-43bc-b24d-d7acd68ec016",
-        "name" : "query-kingdoms",
-        "description" : "${role_query-kingdoms}",
+        "name" : "query-realms",
+        "description" : "${role_query-realms}",
         "composite" : false,
         "clientRole" : true,
         "containerId" : "3eaecc99-83d4-4c7f-ab1b-1aeb82987bd3",
@@ -179,7 +179,7 @@
         "composite" : true,
         "composites" : {
           "client" : {
-            "kingdom-management" : [ "query-clients" ]
+            "realm-management" : [ "query-clients" ]
           }
         },
         "clientRole" : true,
@@ -203,8 +203,8 @@
         "attributes" : { }
       }, {
         "id" : "a489ef51-1c0b-47c5-b311-9362a5b3fc05",
-        "name" : "view-kingdom",
-        "description" : "${role_view-kingdom}",
+        "name" : "view-realm",
+        "description" : "${role_view-realm}",
         "composite" : false,
         "clientRole" : true,
         "containerId" : "3eaecc99-83d4-4c7f-ab1b-1aeb82987bd3",
@@ -251,12 +251,12 @@
         "attributes" : { }
       }, {
         "id" : "5e6fbbb1-2cbb-4b21-b271-18b733cd3e0f",
-        "name" : "kingdom-admin",
-        "description" : "${role_kingdom-admin}",
+        "name" : "realm-admin",
+        "description" : "${role_realm-admin}",
         "composite" : true,
         "composites" : {
           "client" : {
-            "kingdom-management" : [ "manage-clients", "manage-identity-providers", "view-identity-providers", "query-groups", "manage-kingdom", "query-kingdoms", "view-authorization", "manage-events", "view-clients", "manage-users", "view-kingdom", "query-users", "impersonation", "create-client", "view-events", "manage-authorization", "query-clients", "view-users" ]
+            "realm-management" : [ "manage-clients", "manage-identity-providers", "view-identity-providers", "query-groups", "manage-realm", "query-realms", "view-authorization", "manage-events", "view-clients", "manage-users", "view-realm", "query-users", "impersonation", "create-client", "view-events", "manage-authorization", "query-clients", "view-users" ]
           }
         },
         "clientRole" : true,
@@ -269,7 +269,7 @@
         "composite" : true,
         "composites" : {
           "client" : {
-            "kingdom-management" : [ "query-users", "query-groups" ]
+            "realm-management" : [ "query-users", "query-groups" ]
           }
         },
         "clientRole" : true,
@@ -378,7 +378,7 @@
     "name" : "finance-group",
     "path" : "/finance-group",
     "attributes" : { },
-    "kingdomRoles" : [ "testrole1" ],
+    "realmRoles" : [ "testrole1" ],
     "clientRoles" : { },
     "subGroups" : [ ]
   }, {
@@ -386,7 +386,7 @@
     "name" : "hr-group",
     "path" : "/hr-group",
     "attributes" : { },
-    "kingdomRoles" : [ ],
+    "realmRoles" : [ ],
     "clientRoles" : { },
     "subGroups" : [ ]
   }, {
@@ -394,7 +394,7 @@
     "name" : "tech-group",
     "path" : "/tech-group",
     "attributes" : { },
-    "kingdomRoles" : [ "lumi:test" ],
+    "realmRoles" : [ "lumi:test" ],
     "clientRoles" : { },
     "subGroups" : [ ]
   } ],
@@ -450,12 +450,12 @@
     "clientId" : "account",
     "name" : "${client_account}",
     "rootUrl" : "${authBaseUrl}",
-    "baseUrl" : "/kingdoms/lumi/account/",
+    "baseUrl" : "/realms/lumi/account/",
     "surrogateAuthRequired" : false,
     "enabled" : true,
     "alwaysDisplayInConsole" : false,
     "clientAuthenticatorType" : "client-secret",
-    "redirectUris" : [ "/kingdoms/lumi/account/*" ],
+    "redirectUris" : [ "/realms/lumi/account/*" ],
     "webOrigins" : [ ],
     "notBefore" : 0,
     "bearerOnly" : false,
@@ -480,12 +480,12 @@
     "clientId" : "account-console",
     "name" : "${client_account-console}",
     "rootUrl" : "${authBaseUrl}",
-    "baseUrl" : "/kingdoms/lumi/account/",
+    "baseUrl" : "/realms/lumi/account/",
     "surrogateAuthRequired" : false,
     "enabled" : true,
     "alwaysDisplayInConsole" : false,
     "clientAuthenticatorType" : "client-secret",
-    "redirectUris" : [ "/kingdoms/lumi/account/*" ],
+    "redirectUris" : [ "/realms/lumi/account/*" ],
     "webOrigins" : [ ],
     "notBefore" : 0,
     "bearerOnly" : false,
@@ -653,8 +653,8 @@
     "optionalClientScopes" : [ "address", "phone", "offline_access", "microprofile-jwt" ]
   }, {
     "id" : "3eaecc99-83d4-4c7f-ab1b-1aeb82987bd3",
-    "clientId" : "kingdom-management",
-    "name" : "${client_kingdom-management}",
+    "clientId" : "realm-management",
+    "name" : "${client_realm-management}",
     "surrogateAuthRequired" : false,
     "enabled" : true,
     "alwaysDisplayInConsole" : false,
@@ -1080,14 +1080,14 @@
       "config" : { }
     }, {
       "id" : "64815a5f-978f-4ed8-84ec-0c135635f338",
-      "name" : "kingdom roles",
+      "name" : "realm roles",
       "protocol" : "openid-connect",
-      "protocolMapper" : "oidc-usermodel-kingdom-role-mapper",
+      "protocolMapper" : "oidc-usermodel-realm-role-mapper",
       "consentRequired" : false,
       "config" : {
         "user.attribute" : "foo",
         "access.token.claim" : "true",
-        "claim.name" : "kingdom_access.roles",
+        "claim.name" : "realm_access.roles",
         "jsonType.label" : "String",
         "multivalued" : "true"
       }
@@ -1137,7 +1137,7 @@
       "id" : "7826697b-5796-4a90-a16a-cd6aeaf4d85b",
       "name" : "groups",
       "protocol" : "openid-connect",
-      "protocolMapper" : "oidc-usermodel-kingdom-role-mapper",
+      "protocolMapper" : "oidc-usermodel-realm-role-mapper",
       "consentRequired" : false,
       "config" : {
         "multivalued" : "true",
@@ -1935,7 +1935,7 @@
     "clientSessionMaxLifespan" : "0",
     "clientOfflineSessionIdleTimeout" : "0",
     "cibaInterval" : "5",
-    "kingdomReusableOtpCode" : "false"
+    "realmReusableOtpCode" : "false"
   },
   "keycloakVersion" : "22.0.3",
   "userManagedAccessAllowed" : false,
