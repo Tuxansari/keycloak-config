@@ -45,6 +45,14 @@
   "failureFactor" : 30,
   "roles" : {
     "realm" : [ {
+      "id" : "4b4996d5-cf20-4b8b-8205-0949c1b4afdc",
+      "name" : "Sales-admin",
+      "description" : "",
+      "composite" : false,
+      "clientRole" : false,
+      "containerId" : "8ca677d0-15c3-498c-8666-67782b58d7cb",
+      "attributes" : { }
+    }, {
       "id" : "6d591d08-6f3c-44c8-8db5-ca04f54f0ea4",
       "name" : "default-roles-lumi",
       "description" : "${role_default-roles}",
