@@ -453,6 +453,22 @@
     "notBefore" : 0,
     "groups" : [ ]
   }, {
+    "id" : "eca0ef47-7f48-446f-a299-878e4c576aa3",
+    "createdTimestamp" : 1696332735090,
+    "username" : "user-test2",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "firstName" : "usr-test",
+    "lastName" : "seera",
+    "email" : "user-test2@seera.sa",
+    "credentials" : [ ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-lumi" ],
+    "notBefore" : 0,
+    "groups" : [ "/tech-group" ]
+  }, {
     "id" : "2b277149-6a69-4f4f-bb94-3d18c21922cf",
     "createdTimestamp" : 1696248997715,
     "username" : "user1",
