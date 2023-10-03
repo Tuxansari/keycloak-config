@@ -703,13 +703,6 @@
       "allowRemoteResourceManagement" : true,
       "policyEnforcementMode" : "ENFORCING",
       "resources" : [ {
-        "name" : "Default Resource",
-        "type" : "urn:lumi:resources:default",
-        "ownerManagedAccess" : false,
-        "attributes" : { },
-        "_id" : "1998b530-7a23-4c9c-853e-0bd497ac35d9",
-        "uris" : [ "/*" ]
-      }, {
         "name" : "audit",
         "ownerManagedAccess" : false,
         "displayName" : "",
@@ -730,6 +723,16 @@
         "decisionStrategy" : "UNANIMOUS",
         "config" : {
           "roles" : "[{\"id\":\"finance-admin\",\"required\":true}]"
+        }
+      }, {
+        "id" : "8bf16e07-26cb-4d06-a93d-3acf57813c56",
+        "name" : "hasSalesAdminAccess",
+        "description" : "hasSalesAdminAccess descriptin",
+        "type" : "role",
+        "logic" : "POSITIVE",
+        "decisionStrategy" : "UNANIMOUS",
+        "config" : {
+          "roles" : "[{\"id\":\"Sales-admin\",\"required\":true}]"
         }
       }, {
         "id" : "349b041c-c974-4ad7-9e46-ac551c4dc08c",
