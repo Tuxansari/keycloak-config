@@ -414,7 +414,7 @@
   "otpPolicyLookAheadWindow" : 1,
   "otpPolicyPeriod" : 30,
   "otpPolicyCodeReusable" : false,
-  "otpSupportedApplications" : [ "totpAppMicrosoftAuthenticatorName", "totpAppGoogleName", "totpAppFreeOTPName" ],
+  "otpSupportedApplications" : [ "totpAppMicrosoftAuthenticatorName", "totpAppFreeOTPName", "totpAppGoogleName" ],
   "webAuthnPolicyRpEntityName" : "keycloak",
   "webAuthnPolicySignatureAlgorithms" : [ "ES256" ],
   "webAuthnPolicyRpId" : "",
@@ -435,6 +435,56 @@
   "webAuthnPolicyPasswordlessCreateTimeout" : 0,
   "webAuthnPolicyPasswordlessAvoidSameAuthenticatorRegister" : false,
   "webAuthnPolicyPasswordlessAcceptableAaguids" : [ ],
+  "users" : [ {
+    "id" : "438eaa95-a9b0-4e98-85c8-05f90540beba",
+    "createdTimestamp" : 1695852201723,
+    "username" : "service-account-lumi",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "serviceAccountClientId" : "lumi",
+    "credentials" : [ ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-lumi" ],
+    "clientRoles" : {
+      "lumi" : [ "uma_protection" ]
+    },
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "2b277149-6a69-4f4f-bb94-3d18c21922cf",
+    "createdTimestamp" : 1696248997715,
+    "username" : "user1",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : true,
+    "firstName" : "user1",
+    "lastName" : "test",
+    "email" : "user1@seera.sa",
+    "credentials" : [ ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-lumi" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "4cb2f8b3-1445-48cf-a3f5-b1933101024c",
+    "createdTimestamp" : 1696249023292,
+    "username" : "user2",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "firstName" : "user2",
+    "lastName" : "test",
+    "email" : "user2@seera.sa",
+    "credentials" : [ ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-lumi" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  } ],
   "scopeMappings" : [ {
     "clientScope" : "offline_access",
     "roles" : [ "offline_access" ]
@@ -672,16 +722,6 @@
         "icon_uri" : ""
       } ],
       "policies" : [ {
-        "id" : "abfc05f9-c2c4-4886-a3a3-dac073eb5d8e",
-        "name" : "Default Policy",
-        "description" : "A policy that grants access only for users within this realm",
-        "type" : "js",
-        "logic" : "POSITIVE",
-        "decisionStrategy" : "AFFIRMATIVE",
-        "config" : {
-          "code" : "// by default, grants any permission associated with this policy\n$evaluation.grant();\n"
-        }
-      }, {
         "id" : "a70db10c-73ef-4142-a83d-19e933871f45",
         "name" : "hasFinanceAdminAccess",
         "description" : "",
@@ -690,17 +730,6 @@
         "decisionStrategy" : "UNANIMOUS",
         "config" : {
           "roles" : "[{\"id\":\"finance-admin\",\"required\":true}]"
-        }
-      }, {
-        "id" : "5901ff3d-b725-4ac7-8448-43614dbb7222",
-        "name" : "Default Permission",
-        "description" : "A permission that applies to the default resource type",
-        "type" : "resource",
-        "logic" : "POSITIVE",
-        "decisionStrategy" : "UNANIMOUS",
-        "config" : {
-          "defaultResourceType" : "urn:lumi:resources:default",
-          "applyPolicies" : "[\"Default Policy\"]"
         }
       }, {
         "id" : "349b041c-c974-4ad7-9e46-ac551c4dc08c",
