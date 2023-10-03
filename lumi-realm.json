@@ -45,6 +45,14 @@
   "failureFactor" : 30,
   "roles" : {
     "realm" : [ {
+      "id" : "4b4996d5-cf20-4b8b-8205-0949c1b4afdc",
+      "name" : "Sales-admin",
+      "description" : "",
+      "composite" : false,
+      "clientRole" : false,
+      "containerId" : "8ca677d0-15c3-498c-8666-67782b58d7cb",
+      "attributes" : { }
+    }, {
       "id" : "6d591d08-6f3c-44c8-8db5-ca04f54f0ea4",
       "name" : "default-roles-lumi",
       "description" : "${role_default-roles}",
@@ -94,6 +102,14 @@
       "id" : "c47eff81-004b-492f-a5dc-8b12cde65653",
       "name" : "uma_authorization",
       "description" : "${role_uma_authorization}",
+      "composite" : false,
+      "clientRole" : false,
+      "containerId" : "8ca677d0-15c3-498c-8666-67782b58d7cb",
+      "attributes" : { }
+    }, {
+      "id" : "e1a92aaa-586c-4cea-b7f2-19873357cfe0",
+      "name" : "Legal-Team",
+      "description" : "Legal-Team role will be assigned to legal team in lumi ",
       "composite" : false,
       "clientRole" : false,
       "containerId" : "8ca677d0-15c3-498c-8666-67782b58d7cb",
@@ -398,7 +414,7 @@
   "otpPolicyLookAheadWindow" : 1,
   "otpPolicyPeriod" : 30,
   "otpPolicyCodeReusable" : false,
-  "otpSupportedApplications" : [ "totpAppFreeOTPName", "totpAppMicrosoftAuthenticatorName", "totpAppGoogleName" ],
+  "otpSupportedApplications" : [ "totpAppGoogleName", "totpAppFreeOTPName", "totpAppMicrosoftAuthenticatorName" ],
   "webAuthnPolicyRpEntityName" : "keycloak",
   "webAuthnPolicySignatureAlgorithms" : [ "ES256" ],
   "webAuthnPolicyRpId" : "",
