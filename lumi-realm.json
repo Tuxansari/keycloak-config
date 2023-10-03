@@ -414,7 +414,7 @@
   "otpPolicyLookAheadWindow" : 1,
   "otpPolicyPeriod" : 30,
   "otpPolicyCodeReusable" : false,
-  "otpSupportedApplications" : [ "totpAppGoogleName", "totpAppMicrosoftAuthenticatorName", "totpAppFreeOTPName" ],
+  "otpSupportedApplications" : [ "totpAppMicrosoftAuthenticatorName", "totpAppFreeOTPName", "totpAppGoogleName" ],
   "webAuthnPolicyRpEntityName" : "keycloak",
   "webAuthnPolicySignatureAlgorithms" : [ "ES256" ],
   "webAuthnPolicyRpId" : "",
@@ -484,6 +484,22 @@
     "realmRoles" : [ "default-roles-lumi" ],
     "notBefore" : 0,
     "groups" : [ ]
+  }, {
+    "id" : "ff051837-2748-4a00-8aca-cd2bc3b9dcae",
+    "createdTimestamp" : 1696331187523,
+    "username" : "user3",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : true,
+    "firstName" : "user",
+    "lastName" : "seera",
+    "email" : "user3@seera.sa",
+    "credentials" : [ ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-lumi" ],
+    "notBefore" : 0,
+    "groups" : [ "/finance-group" ]
   } ],
   "scopeMappings" : [ {
     "clientScope" : "offline_access",
