@@ -106,6 +106,14 @@
       "clientRole" : false,
       "containerId" : "8ca677d0-15c3-498c-8666-67782b58d7cb",
       "attributes" : { }
+    }, {
+      "id" : "e1a92aaa-586c-4cea-b7f2-19873357cfe0",
+      "name" : "Legal-Team",
+      "description" : "Legal-Team role will be assigned to legal team in lumi ",
+      "composite" : false,
+      "clientRole" : false,
+      "containerId" : "8ca677d0-15c3-498c-8666-67782b58d7cb",
+      "attributes" : { }
     } ],
     "client" : {
       "realm-management" : [ {
@@ -406,7 +414,7 @@
   "otpPolicyLookAheadWindow" : 1,
   "otpPolicyPeriod" : 30,
   "otpPolicyCodeReusable" : false,
-  "otpSupportedApplications" : [ "totpAppFreeOTPName", "totpAppMicrosoftAuthenticatorName", "totpAppGoogleName" ],
+  "otpSupportedApplications" : [ "totpAppMicrosoftAuthenticatorName", "totpAppGoogleName", "totpAppFreeOTPName" ],
   "webAuthnPolicyRpEntityName" : "keycloak",
   "webAuthnPolicySignatureAlgorithms" : [ "ES256" ],
   "webAuthnPolicyRpId" : "",
