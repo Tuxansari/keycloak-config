@@ -97,5 +97,21 @@
     "realmRoles" : [ "default-roles-lumi" ],
     "notBefore" : 0,
     "groups" : [ "/finance-group" ]
+  }, {
+    "id" : "ef4816d2-3a7b-4236-b60d-591c19867029",
+    "createdTimestamp" : 1697462019110,
+    "username" : "user8",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : true,
+    "firstName" : "user8",
+    "lastName" : "seera",
+    "email" : "user8@seera.sa",
+    "credentials" : [ ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-lumi" ],
+    "notBefore" : 0,
+    "groups" : [ ]
   } ]
 }
