@@ -54,23 +54,6 @@
         },
         {
             "totp": false,
-            "lastName": "seera",
-            "credentials": [],
-            "createdTimestamp": 1697533428709,
-            "groups": [],
-            "enabled": true,
-            "notBefore": 0,
-            "disableableCredentialTypes": [],
-            "emailVerified": false,
-            "firstName": "qauser1",
-            "realmRoles": ["default-roles-lumi"],
-            "requiredActions": [],
-            "id": "cc7be4e5-dcca-4ab9-b316-0afa0da5fd50",
-            "email": "qauser1@seera.sa",
-            "username": "qauser1"
-        },
-        {
-            "totp": false,
             "serviceAccountClientId": "lumi",
             "credentials": [],
             "createdTimestamp": 1695852201723,
