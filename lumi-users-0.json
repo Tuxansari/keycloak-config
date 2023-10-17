@@ -101,6 +101,40 @@
             "id": "4c3c6db6-5b26-4ec5-80ae-e6323dc3c84d",
             "email": "user7@seera.sa",
             "username": "user7"
+        },
+        {
+            "totp": false,
+            "lastName": "seera",
+            "credentials": [],
+            "createdTimestamp": 1697462019110,
+            "groups": [],
+            "enabled": true,
+            "notBefore": 0,
+            "disableableCredentialTypes": [],
+            "emailVerified": true,
+            "firstName": "user8",
+            "realmRoles": ["default-roles-lumi"],
+            "requiredActions": [],
+            "id": "ef4816d2-3a7b-4236-b60d-591c19867029",
+            "email": "user8@seera.sa",
+            "username": "user8"
+        },
+        {
+            "totp": false,
+            "lastName": "seera",
+            "credentials": [],
+            "createdTimestamp": 1697523032561,
+            "groups": [],
+            "enabled": true,
+            "notBefore": 0,
+            "disableableCredentialTypes": [],
+            "emailVerified": false,
+            "firstName": "user9",
+            "realmRoles": ["default-roles-lumi"],
+            "requiredActions": [],
+            "id": "7beff18b-c675-4c05-a955-a957f1bf298e",
+            "email": "user9@seera.sa",
+            "username": "user9"
         }
     ]
 }
