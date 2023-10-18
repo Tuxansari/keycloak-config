@@ -99,6 +99,14 @@
       "containerId" : "8ca677d0-15c3-498c-8666-67782b58d7cb",
       "attributes" : { }
     }, {
+      "id" : "1ea7584e-202a-4fa4-bc0a-5c525153e44b",
+      "name" : "test role 1",
+      "description" : "test role 1",
+      "composite" : false,
+      "clientRole" : false,
+      "containerId" : "8ca677d0-15c3-498c-8666-67782b58d7cb",
+      "attributes" : { }
+    }, {
       "id" : "dfd49451-6767-4167-8553-b5a09add5074",
       "name" : "offline_access",
       "description" : "${role_offline-access}",
@@ -430,7 +438,7 @@
   "otpPolicyLookAheadWindow" : 1,
   "otpPolicyPeriod" : 30,
   "otpPolicyCodeReusable" : false,
-  "otpSupportedApplications" : [ "totpAppMicrosoftAuthenticatorName", "totpAppGoogleName", "totpAppFreeOTPName" ],
+  "otpSupportedApplications" : [ "totpAppMicrosoftAuthenticatorName", "totpAppFreeOTPName", "totpAppGoogleName" ],
   "webAuthnPolicyRpEntityName" : "keycloak",
   "webAuthnPolicySignatureAlgorithms" : [ "ES256" ],
   "webAuthnPolicyRpId" : "",
