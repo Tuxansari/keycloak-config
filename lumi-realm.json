@@ -430,7 +430,7 @@
   "otpPolicyLookAheadWindow" : 1,
   "otpPolicyPeriod" : 30,
   "otpPolicyCodeReusable" : false,
-  "otpSupportedApplications" : [ "totpAppGoogleName", "totpAppMicrosoftAuthenticatorName", "totpAppFreeOTPName" ],
+  "otpSupportedApplications" : [ "totpAppMicrosoftAuthenticatorName", "totpAppGoogleName", "totpAppFreeOTPName" ],
   "webAuthnPolicyRpEntityName" : "keycloak",
   "webAuthnPolicySignatureAlgorithms" : [ "ES256" ],
   "webAuthnPolicyRpId" : "",
@@ -683,6 +683,17 @@
           "name" : "view"
         } ],
         "icon_uri" : ""
+      }, {
+        "name" : "Test",
+        "ownerManagedAccess" : false,
+        "displayName" : "",
+        "attributes" : { },
+        "_id" : "76b49268-30aa-4106-a04e-a9611ba2035b",
+        "uris" : [ "/v1/test" ],
+        "scopes" : [ {
+          "name" : "view"
+        } ],
+        "icon_uri" : ""
       } ],
       "policies" : [ {
         "id" : "a70db10c-73ef-4142-a83d-19e933871f45",
@@ -703,6 +714,16 @@
         "decisionStrategy" : "UNANIMOUS",
         "config" : {
           "roles" : "[{\"id\":\"Sales-admin\",\"required\":true}]"
+        }
+      }, {
+        "id" : "8a5fe39e-01a6-4d85-a4a9-b39e50891cce",
+        "name" : "Test policy",
+        "description" : "",
+        "type" : "role",
+        "logic" : "POSITIVE",
+        "decisionStrategy" : "UNANIMOUS",
+        "config" : {
+          "roles" : "[{\"id\":\"Tech-admin\",\"required\":false}]"
         }
       }, {
         "id" : "349b041c-c974-4ad7-9e46-ac551c4dc08c",
@@ -727,6 +748,18 @@
           "resources" : "[\"audit\"]",
           "scopes" : "[\"view\"]",
           "applyPolicies" : "[\"hasFinanceAdminAccess\"]"
+        }
+      }, {
+        "id" : "4acf9e27-470b-40ab-b911-8d9f632ce32d",
+        "name" : "Test permission",
+        "description" : "",
+        "type" : "scope",
+        "logic" : "POSITIVE",
+        "decisionStrategy" : "AFFIRMATIVE",
+        "config" : {
+          "resources" : "[\"Test\"]",
+          "scopes" : "[\"view\"]",
+          "applyPolicies" : "[\"Test policy\"]"
         }
       } ],
       "scopes" : [ {
