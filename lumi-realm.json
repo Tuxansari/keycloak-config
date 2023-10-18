@@ -107,6 +107,14 @@
       "containerId" : "8ca677d0-15c3-498c-8666-67782b58d7cb",
       "attributes" : { }
     }, {
+      "id" : "8e7b06ec-7df0-468c-8a71-1e86b3081782",
+      "name" : "sales-team-uae",
+      "description" : "role for sales team uae",
+      "composite" : false,
+      "clientRole" : false,
+      "containerId" : "8ca677d0-15c3-498c-8666-67782b58d7cb",
+      "attributes" : { }
+    }, {
       "id" : "e1a92aaa-586c-4cea-b7f2-19873357cfe0",
       "name" : "Legal-Team",
       "description" : "Legal-Team role will be assigned to legal team in lumi ",
@@ -414,7 +422,7 @@
   "otpPolicyLookAheadWindow" : 1,
   "otpPolicyPeriod" : 30,
   "otpPolicyCodeReusable" : false,
-  "otpSupportedApplications" : [ "totpAppGoogleName", "totpAppMicrosoftAuthenticatorName", "totpAppFreeOTPName" ],
+  "otpSupportedApplications" : [ "totpAppFreeOTPName", "totpAppGoogleName", "totpAppMicrosoftAuthenticatorName" ],
   "webAuthnPolicyRpEntityName" : "keycloak",
   "webAuthnPolicySignatureAlgorithms" : [ "ES256" ],
   "webAuthnPolicyRpId" : "",
